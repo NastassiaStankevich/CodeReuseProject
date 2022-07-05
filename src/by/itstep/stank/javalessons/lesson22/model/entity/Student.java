@@ -20,12 +20,12 @@ public class  Student extends Human {
         }
     }
 
-//    public Student(){
-//        name = "no name";
-//        age = 16;
-//        mark = 4;
-//        alive = true;
-//    }
+    public Student(){
+        name = "no name";
+        age = 16;
+        mark = 4;
+        alive = true;
+    }
 
 
     public  Student(String name, int age , double mark , boolean alive){
@@ -40,26 +40,26 @@ public class  Student extends Human {
     }
 
     public Student(Student student){
-        setName(name);
-        setAge(age);
-        setAlive(alive);
-//        name = student.name;
-//        age = student.age;
+//        setName(name);
+//        setAge(age);
+//        setAlive(alive);
+        name = student.name;
+        age = student.age;
         mark = student.mark;
-//        alive = student.alive;
+        alive = student.alive;
     }
-//
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public int getAge() {
-//        return age;
-//    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
 
     public void setAge(int age) {
         if (age >= MIN_STUDENT_AGE && age <= MAX_STUDENT_AGE) {
@@ -70,14 +70,14 @@ public class  Student extends Human {
 
 
 
-//
-//    public boolean isAlive() {
-//        return alive;
-//    }
-//
-//    public void setAlive(boolean alive) {
-//        this.alive = alive;
-//    }
+
+    public boolean isAlive() {
+        return alive;
+    }
+
+    public void setAlive(boolean alive) {
+        this.alive = alive;
+    }
 
     public String getInfo(){
         return  "Student " +

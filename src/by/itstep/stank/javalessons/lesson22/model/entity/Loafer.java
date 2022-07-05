@@ -7,14 +7,14 @@ public class Loafer extends Human {
 
 
     public String getInfo(){
-//        return  "Loafer " + name
-//                + ": age = " + age
-//                + ", inactivity period = " + inactivityPeriod
-//                + ", is alive = " + (alive ? "yes" : "No");
-        return  "Loafer " + getName()
-                + ": age = " + getAge()
+        return  "Loafer " + name
+                + ": age = " + age
                 + ", inactivity period = " + inactivityPeriod
-                + ", is alive = " + ( isAlive() ? "yes" : "No");
+                + ", is alive = " + (alive ? "yes" : "No");
+//        return  "Loafer " + getName()
+//                + ": age = " + getAge()
+//                + ", inactivity period = " + inactivityPeriod
+//                + ", is alive = " + ( isAlive() ? "yes" : "No");
 
     }
 
@@ -23,13 +23,13 @@ public class Loafer extends Human {
     }
 
     public Loafer(String name, int age, double inactivityPeriod, boolean alive) {
-        setName(name);
-        setAge(age);
-        setAlive(alive);
-//        this.name = name;
-//        this.age = age;
+//        setName(name);
+//        setAge(age);
+//        setAlive(alive);
+        this.name = name;
+        this.age = age;
         this.inactivityPeriod = inactivityPeriod;
-//        this.alive = alive;
+        this.alive = alive;
     }
 
     public static double getAmount() {
@@ -40,21 +40,21 @@ public class Loafer extends Human {
         Loafer.amount = amount;
     }
 
-//    public String getName() {
-//        return name;
-//    }
-//
-//    public void setName(String name) {
-//        this.name = name;
-//    }
-//
-//    public int getAge() {
-//        return age;
-//    }
-//
-//    public void setAge(int age) {
-//        this.age = age;
-//    }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 
     public double getInactivityPeriod() {
         return inactivityPeriod;
@@ -63,12 +63,12 @@ public class Loafer extends Human {
     public void setInactivityPeriod(double inactivityPeriod) {
         this.inactivityPeriod = inactivityPeriod;
     }
-//
-//    public boolean isAlive() {
-//        return alive;
-//    }
-//
-//    public void setAlive(boolean alive) {
-//        this.alive = alive;
-//    }
+
+    public boolean isAlive() {
+        return alive;
+   }
+
+    public void setAlive(boolean alive) {
+        this.alive = alive;
+    }
 }
