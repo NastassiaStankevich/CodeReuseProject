@@ -21,6 +21,8 @@ public class  Student extends Human {
     }
 
     public Student(){
+        super();
+        System.out.println("Student default constructor");
         name = "no name";
         age = 16;
         mark = 4;
@@ -29,9 +31,8 @@ public class  Student extends Human {
 
 
     public  Student(String name, int age , double mark , boolean alive){
-        setName(name);
-        setAge(age);
-        setAlive(alive);
+        super(name, age, alive);
+        System.out.println("Student full default constructor");
 //        this.name = name;
 //        this.age = age;
         this.mark = mark;
@@ -40,6 +41,7 @@ public class  Student extends Human {
     }
 
     public Student(Student student){
+        super();
 //        setName(name);
 //        setAge(age);
 //        setAlive(alive);
@@ -81,9 +83,10 @@ public class  Student extends Human {
 
     public String getInfo(){
         return  "Student " +
-                name + ": age = " + age
-                + ", mark = " + mark
-                + ", is alive = " + (alive ? "yes" : "No");
+
+                super.getInfo()
+
+                + ", mark = " + mark;
 
     }
 }

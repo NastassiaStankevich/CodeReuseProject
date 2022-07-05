@@ -4,24 +4,26 @@ public class Worker extends Human {
     private double salary;
 
 
-//    public String getInfo(){
-//        return  "Worker "  + getName()
-//                + ": age = " + getAge()
-//                + ", Salary = " + getSalary()
-//                + ", is alive = " + (isAlive() ? "yes" : "No");
-//
-//    }
+    public String getInfo(){
+        return  "Worker " +
+
+                super.getInfo()
+
+                + ", mark = " + salary;
+
+    }
 
 
 
     public Worker(String name, int age, double salary, boolean alive) {
+        super(name, age, alive);
 //        setName(name);
 //        setAge(age);
 //        setAlive(alive);
-        this.name = name;
-        this.age = age;
+//        this.name = name;
+//        this.age = age;
         this.salary = salary;
-        this.alive = alive;
+//        this.alive = alive;
     }
 
     public String getName() {
