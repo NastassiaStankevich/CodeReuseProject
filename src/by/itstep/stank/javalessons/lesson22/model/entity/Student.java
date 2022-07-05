@@ -42,18 +42,18 @@ public class Student {
         mark = student.mark;
         alive = student.alive;
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
+//
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public void setName(String name) {
+//        this.name = name;
+//    }
+//
+//    public int getAge() {
+//        return age;
+//    }
 
     public void setAge(int age) {
         if (age >= MIN_STUDENT_AGE && age <= MAX_STUDENT_AGE) {
@@ -62,16 +62,20 @@ public class Student {
     }
 
 
-    public boolean isAlive() {
-        return alive;
-    }
 
-    public void setAlive(boolean alive) {
-        this.alive = alive;
-    }
+
+//
+//    public boolean isAlive() {
+//        return alive;
+//    }
+//
+//    public void setAlive(boolean alive) {
+//        this.alive = alive;
+//    }
 
     public String getInfo(){
-        return  name + ": age = " + age
+        return  "Student " +
+                name + ": age = " + age
                 + ", mark = " + mark
                 + ", is alive = " + (alive ? "yes" : "No");
 
