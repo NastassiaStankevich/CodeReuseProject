@@ -3,20 +3,12 @@ public class Student {
 
     public static final int MIN_MARK =0;
     public static final int MAX_MARK =10;
+    public static final int MIN_STUDENT_AGE = 16;
+    public static final int MAX_STUDENT_AGE = 65;
     public String name;
     public int age;
     private double mark =4;
     public boolean alive;
-
-
-    public String getName(){
-        return name;
-    }
-
-    public void setName(String name){
-        this.name = name;
-
-    }
 
     public double getMark(){
         return  mark;
@@ -27,9 +19,6 @@ public class Student {
             this.mark = mark;
         }
     }
-
-
-
 
     public Student(){
         name = "no name";
@@ -52,6 +41,33 @@ public class Student {
         age = student.age;
         mark = student.mark;
         alive = student.alive;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        if (age >= MIN_STUDENT_AGE && age <= MAX_STUDENT_AGE) {
+        this.age = age;
+        }
+    }
+
+
+    public boolean isAlive() {
+        return alive;
+    }
+
+    public void setAlive(boolean alive) {
+        this.alive = alive;
     }
 
     public String getInfo(){
