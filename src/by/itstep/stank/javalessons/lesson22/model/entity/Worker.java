@@ -1,27 +1,28 @@
 package by.itstep.stank.javalessons.lesson22.model.entity;
 
-public class Worker {
-    private System name;
-    private int age;
+public class Worker extends Human {
     private double salary;
     //
-    private boolean alive;
+
 
     public String getInfo(){
-        return  "Worker "  + name
-                + ": age = " + age
-                + ", Salary = " + salary
-                + ", is alive = " + (alive ? "yes" : "No");
+        return  "Worker "  + getName()
+                + ": age = " + getAge()
+                + ", Salary = " + getSalary()
+                + ", is alive = " + (isAlive() ? "yes" : "No");
 
     }
 
 
 
-    public Worker(System name, int age, double salary, boolean alive) {
-        this.name = name;
-        this.age = age;
+    public Worker(String name, int age, double salary, boolean alive) {
+        setName(name);
+        setAge(age);
+        setAlive(alive);
+//        this.name = name;
+//        this.age = age;
         this.salary = salary;
-        this.alive = alive;
+//        this.alive = alive;
     }
 
 //    public System getName() {
