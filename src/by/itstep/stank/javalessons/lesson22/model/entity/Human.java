@@ -1,17 +1,20 @@
 package by.itstep.stank.javalessons.lesson22.model.entity;
 
-public class Human {
+public class Human extends Object {
     protected String name;
     protected int age;
     protected boolean alive;
 
     public Human(){
-        System.out.println("human default constructor");
+        super();
+   //     System.out.println("human default constructor");
 
     }
 
     public Human(String name, int age, boolean alive) {
-        System.out.println("human full constructor");
+        this();
+    //    System.out.println("human full constructor");
+
         this.name = name;
         this.age = age;
         this.alive = alive;

@@ -5,10 +5,14 @@ public class  Student extends Human {
     public static final int MAX_MARK =10;
     public static final int MIN_STUDENT_AGE = 16;
     public static final int MAX_STUDENT_AGE = 65;
-//    public String name;
-//    public int age;
+
+    private MarkNote note;
+    public String name;
+    public int age;
     private double mark =4;
-//    public boolean alive;
+    public boolean alive;
+
+
 
     public double getMark(){
         return  mark;
@@ -22,8 +26,10 @@ public class  Student extends Human {
 
     public Student(){
         super();
-        System.out.println("Student default constructor");
-        name = "no name";
+      //  System.out.println("Student default constructor");
+
+        name = "botan";
+        super.name = "no name";
         age = 16;
         mark = 4;
         alive = true;
@@ -32,13 +38,21 @@ public class  Student extends Human {
 
     public  Student(String name, int age , double mark , boolean alive){
         super(name, age, alive);
-        System.out.println("Student full default constructor");
+        note = new MarkNote(mark);
+
 //        this.name = name;
 //        this.age = age;
         this.mark = mark;
 //        this.alive = alive;
 
     }
+
+    public  Student(String name, int age , MarkNote note, boolean alive){
+        super(name, age, alive);
+        this.note = new note;
+    }
+
+
 
     public Student(Student student){
         super();
@@ -47,7 +61,7 @@ public class  Student extends Human {
 //        setAlive(alive);
         name = student.name;
         age = student.age;
-        mark = student.mark;
+       note= new MarkNote(student.note.getMark());
         alive = student.alive;
     }
 
@@ -63,11 +77,11 @@ public class  Student extends Human {
         return age;
     }
 
-    public void setAge(int age) {
-        if (age >= MIN_STUDENT_AGE && age <= MAX_STUDENT_AGE) {
-        this.age = age;
-        }
-    }
+//    public void setAge(int age) {
+//        if (age >= MIN_STUDENT_AGE && age <= MAX_STUDENT_AGE) {
+//        this.age = age;
+//        }
+//    }
 
 
 
@@ -86,7 +100,7 @@ public class  Student extends Human {
 
                 super.getInfo()
 
-                + ", mark = " + mark;
+                + ", mark = " + note.setMark();
 
     }
 }
