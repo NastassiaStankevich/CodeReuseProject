@@ -100,7 +100,7 @@ public class  Student extends Human {
 
                 super.getInfo()
 
-                + ", mark = " + note.setMark();
+                + ", mark = " + note.getMark();
 
     }
 }

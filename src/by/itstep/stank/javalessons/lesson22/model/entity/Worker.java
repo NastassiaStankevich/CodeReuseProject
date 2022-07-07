@@ -4,10 +4,10 @@ public class Worker extends Human {
     private double salary;
 
 
-    public String getInfo(){
+    public String toString(){
         return  "Worker " +
 
-                super.getInfo()
+                super.toString()
 
                 + ", mark = " + salary;
 

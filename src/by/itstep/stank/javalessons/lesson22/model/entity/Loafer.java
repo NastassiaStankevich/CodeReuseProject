@@ -6,9 +6,9 @@ public class Loafer extends Human {
     private double inactivityPeriod;
 
 
-    public String getInfo(){
+    public String toString(){
         return  "Loafer " +
-                super.getInfo()
+                super.toString()
                 + ", inactivity period = " + inactivityPeriod;
 
 //        return  "Loafer " + getName()
