@@ -12,13 +12,13 @@ public class Killer {
         }
     }
 
-//    public static void view(Human[] humans) {
-//        StringBuilder builder = new StringBuilder();
-//
-//        for (int i = 0; i < humans.length; i++) {
-//            builder.append(humans[i].getInfo()).append("\n");
-//
-//        }
-//        return builder + "";
-//    }
+    public static void view(Human[] humans) {
+        StringBuilder builder = new StringBuilder();
+
+        for (int i = 0; i < humans.length; i++) {
+            builder.append(humans[i]).append("\n");
+
+        }
+        return builder + "";
+    }
 }
